@@ -1,0 +1,32 @@
+{
+  "nodes":[
+    {"name":"Myriel","group":10},
+    {"name":"Napoleon","group":1},
+    {"name":"Mlle.Baptistine","group":1},
+    {"name":"Mme.Magloire","group":1},
+    {"name":"CountessdeLo","group":1},
+    {"name":"Geborand","group":1},
+    {"name":"Count","group":4},
+    {"name":"OldMan","group":4},
+    {"name":"Labarre","group":2},
+    {"name":"Valjean","group":2},
+    {"name":"Marguerite","group":2},
+    {"name":"Listolier","group":4}
+  ],
+  "links":[
+    {"source":1,"target":0,"value":325},
+    {"source":2,"target":0,"value":100},
+    {"source":3,"target":0,"value":200},
+    {"source":4,"target":0,"value":200},
+    {"source":5,"target":0,"value":150},
+    {"source":6,"target":0,"value":300},
+    {"source":7,"target":0,"value":250},
+    {"source":8,"target":0,"value":300},
+    {"source":9,"target":0,"value":200},
+    {"source":10,"target":0,"value":150},
+    {"source":11,"target":0,"value":125}
+    ],
+  "wall":[
+    {"source":-1,"target":0,"value":5}
+  ]
+}
