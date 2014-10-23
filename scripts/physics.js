@@ -79,6 +79,7 @@ Physics(function(world){
 	var verletConstraints = Physics.behavior('verlet-constraints', {
         iterations: 10
     });
+    var interactions = Physics.behavior('interactive', { el: renderer.el });
     
     $(nodes).each(function(i, node) {
     	verletConstraints.distanceConstraint( userNode, node, 1, node.dist );
@@ -87,8 +88,10 @@ Physics(function(world){
 	/*************** Populate world *******/
 	bodyImpulseResponse.applyTo( nodes );
 	attractor.applyTo( nodes );
+	interactions.applyTo( nodes );
 	world.add( bodyImpulseResponse );
 	world.add( attractor );
+	world.add( interactions );
 	world.add( renderer );
 	//world.add( edgeCollision );
 	world.add( bodyCollisionDetection );
