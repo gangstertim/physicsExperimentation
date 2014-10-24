@@ -2,12 +2,25 @@
 <meta charset="utf-8">
 <head>
 <link rel="stylesheet" type="text/css" href="./physics.css">
+<link rel="stylesheet" href="./jquery.sidr.dark.css">
 </head>
 
 <body>
-	<canvas id="viewport" width="500" height="500"></canvas>
+	<!--sidebar-->
+	<a id="simple-menu" href="#sidr">Toggle menu</a>
+	<div id="sidr">
+	  <ul>
+	    <li><a href="#">List 1</a></li>
+	    <li class="active"><a href="#">List 2</a></li>
+	    <li><a href="#">List 3</a></li>
+	  </ul>
+	</div>
+	<!--canvas-->
+  <canvas id="viewport" width="500" height="500"></canvas>
 </body>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="./scripts/jquery.sidr.min.js"></script>
 <script src="./scripts/physicsjs/physicsjs-full-0.6.0.min.js"></script>
 <script src="./scripts/physics.js"></script>

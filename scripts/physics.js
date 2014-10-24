@@ -1,3 +1,4 @@
+$('#simple-menu').sidr({displace: false});  //initialize sidebar
 document.body.className = 'before-game';
 var inGame = false;
 var par = parent;
@@ -128,7 +129,7 @@ var init = function init( world, Physics ){
 	bodyImpulseResponse.applyTo( nodes );
 	attractor.applyTo( nodes );
 	interactions.applyTo( nodes );
-	world.add( bodyImpulseResponse );
+	//world.add( bodyImpulseResponse );
 	world.add( attractor );
 	world.add( interactions );
 	//world.add( edgeCollision );
