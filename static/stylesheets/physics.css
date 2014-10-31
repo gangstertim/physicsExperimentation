@@ -29,3 +29,10 @@ body.lose-game:after {
 body.win-game:after {
     content: 'Win! press "z" to play again';
 }
+
+#viewport {
+    position: relative !important;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+}

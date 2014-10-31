@@ -1,26 +1,54 @@
+
 <!DOCTYPE html>
-<meta charset="utf-8">
-<head>
-<link rel="stylesheet" type="text/css" href="./physics.css">
-<link rel="stylesheet" href="./jquery.sidr.dark.css">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="UI experimentation">
+    <meta name="author" content="Timothy Miller">
 
-<body>
-	<!--sidebar-->
-	<a id="simple-menu" href="#sidr">Toggle menu</a>
-	<div id="sidr">
-	  <ul>
-	    <li><a href="#">List 1</a></li>
-	    <li class="active"><a href="#">List 2</a></li>
-	    <li><a href="#">List 3</a></li>
-	  </ul>
-	</div>
-	<!--canvas-->
-  <canvas id="viewport" width="500" height="500"></canvas>
-</body>
+    <link href="./static/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./static/stylesheets/cover.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./static/stylesheets/physics.css">
+		<link rel="stylesheet" href="./static/stylesheets/jquery.sidr.dark.css">
+	</head>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-<script src="./scripts/jquery.sidr.min.js"></script>
-<script src="./scripts/physicsjs/physicsjs-full-0.6.0.min.js"></script>
-<script src="./scripts/physics.js"></script>
+	<body>
+		<div class="site-wrapper">
+			<div class="site-wrapper-inner">
+				<div class="cover-container">
+					<div class="masthead clearfix">
+						<div class="inner">
+							<h3 class="masthead-brand">Cover</h3>
+							<ul class="nav masthead-nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="#">Features</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--canvas-->
+	  				<canvas id="viewport"></canvas>
+					<div class="inner cover">
+	            		<p class="lead">
+	              			<a href="#" class="btn btn-lg btn-default">Learn more</a>
+	            		</p>
+          			</div>
+          			<div class="mastfoot">
+            			<div class="inner">
+              				<p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            			</div>
+          			</div>
+        		</div>
+      		</div>
+    	</div>
+    </div>
+
+	  <!--scripts-->
+		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<script src="./static/scripts/physicsjs/physicsjs-full-0.6.0.min.js"></script>
+		<script src="./static/scripts/physics.js"></script>
+		<script src="./static/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+	</body>
+</html>

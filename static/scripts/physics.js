@@ -1,6 +1,3 @@
-$('#simple-menu').sidr({displace: false});  //initialize sidebar
-document.body.className = 'before-game';
-var inGame = false;
 var par = parent;
 var world = null;
 var renderer = Physics.renderer('canvas', {
@@ -9,42 +6,28 @@ var renderer = Physics.renderer('canvas', {
     height: par.innerHeight
 });
 
-//capture canvas dimensions
-try {
-  par && par.innerWidth;
-} catch( e ){
-  par = window;
-}
-document.addEventListener('keydown', function( e ){
-  if (!inGame && e.keyCode === 90){
-    document.body.className = 'in-game';
-    inGame = true;
-    newGame();
-  }
-});
 window.addEventListener('resize', function(){
-    renderer.el.width = par.innerWidth;
-    renderer.el.height = par.innerHeight;
+    //renderer.el.width = par.innerWidth;
+    //renderer.el.height = par.innerHeight;
 });
   
 function newGame() { 
+	//capture canvas dimensions
+	try {
+	  par && par.innerWidth;
+	} catch( e ){
+	  par = window;
+	}
+
   if (world){
     world.destroy();
   }
   world = Physics( init );
 };
 
-
-
 var init = function init( world, Physics ){
 	/************* Parameters ************/
 	var bounds = Physics.aabb(0, 0, par.innerWidth, par.innerHeight);
-	// var renderer = Physics.renderer('dom', {
- //        el: 'viewport',
- //        width: CANVAS_WIDTH,
- //        height: CANVAS_HEIGHT,
- //        meta: false, // don't display meta data
- //    });
 	var colors = ['#1BA1E2', '#A05000', '#339933',
 				  '#A2C139', '#D80073', '#F09609',
 				  '#E671B8', '#A200FF', '#E51400',
@@ -87,7 +70,7 @@ var init = function init( world, Physics ){
 			dist: el.dist
 		});
 		dNode.view = new Image();
-		dNode.view.src = 'images/' + i + '.png';
+		dNode.view.src = '/static/images/' + i + '.png';
 		nodes.push(dNode);
 	});
 	var userNode = Physics.body('circle', {
@@ -100,7 +83,7 @@ var init = function init( world, Physics ){
 		}
 	});
 	userNode.view = new Image();
-  userNode.view.src = 'images/userNode.png';
+  userNode.view.src = '/static/images/userNode.png';
 
 	/*************** Behaviors *************/
 	var edgeCollision = Physics.behavior('edge-collision-detection', {
@@ -147,3 +130,5 @@ var init = function init( world, Physics ){
     	world.render();
 	});
 };
+
+newGame();
